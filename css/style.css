@@ -116,6 +116,18 @@ body {  /*efficient way to make all child elements inherit a property, fonts sho
     }
 }
 
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
 .btn:link,
 .btn:visited {
     text-transform: uppercase;
@@ -163,4 +175,9 @@ body {  /*efficient way to make all child elements inherit a property, fonts sho
 .btn:hover::after { /* when we hover on the button, we get these styles on pseudo after element*/
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; /* animation styles that are at 0% will be applied to an element before the animation even starts */
 }
