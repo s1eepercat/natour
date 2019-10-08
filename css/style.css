@@ -54,11 +54,16 @@ body {  /*efficient way to make all child elements inherit a property, fonts sho
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
+    text-align: center;
 }
 
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
+
+    backface-visibility: hidden; /*fixes animation glitchy little jump, if exists*/
+
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -67,9 +72,7 @@ body {  /*efficient way to make all child elements inherit a property, fonts sho
     font-weight: 400;
     letter-spacing: 35px;
 
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
+    animation: moveInLeft 1s ease-out;
 }
 
 .heading-primary-sub {
@@ -78,9 +81,7 @@ body {  /*efficient way to make all child elements inherit a property, fonts sho
     font-weight: 700;
     letter-spacing: 17.4px;
 
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
+    animation: moveInRight 1s ease-out;
 }
 
 @keyframes moveInLeft {
@@ -113,4 +114,53 @@ body {  /*efficient way to make all child elements inherit a property, fonts sho
         opacity: 1;
         transform: translate(0);
     }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+/*after pseudo-element for a btn*/
+.btn::after { 
+    content: ""; /* < --- need to specify at least something for pseudo-element to appear*/
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after { /* when we hover on the button, we get these styles on pseudo after element*/
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
 }
