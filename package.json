@@ -18,7 +18,9 @@
     "url": "https://github.com/s1eepercat/natour/issues"
   },
   "homepage": "https://github.com/s1eepercat/natour#readme",
-  "dependencies": {
-    "live-server": "^1.2.1"
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^4.12.0"
   }
 }
