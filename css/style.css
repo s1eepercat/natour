@@ -11,14 +11,6 @@ html {
   /* 62.5% - will be % from default browsers's size which is usually 16px, so now it's 10px*/ }
 
 body {
-  /*efficient way to make all child elements inherit a property, fonts should always be in the body*/
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  /* white line around a web page */
   box-sizing: border-box;
   /* borders and paddings are no longer added to the total width/height of the element*/ }
 
@@ -49,6 +41,35 @@ body {
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+body {
+  /*efficient way to make all child elements inherit a property, fonts should always be in the body*/
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  /* white line around a web page */ }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /*fixes animation glitchy little jump, if exists*/
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 1s ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
 
 .btn {
   /*after pseudo-element for a btn*/ }
@@ -112,22 +133,3 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  /*fixes animation glitchy little jump, if exists*/
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation: moveInLeft 1s ease-out; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out; }
