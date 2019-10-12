@@ -1,0 +1,7 @@
+@mixin clearfix { //create a pseudo element to fix height of an element whose height is 0px because children are floated
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

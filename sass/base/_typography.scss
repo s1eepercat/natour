@@ -1,7 +1,7 @@
 body {  /*efficient way to make all child elements inherit a property, fonts should always be in the body*/
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 1.6rem;
+    // font-size: 1.6rem;
     line-height: 1.7;
     color: $color-dark-grey;
 
@@ -32,5 +32,28 @@ body {  /*efficient way to make all child elements inherit a property, fonts sho
         letter-spacing: 1.75rem;
     
         animation: moveInRight 1s ease-out;
+    }
+}
+
+.btn {
+    font-size: 1.6rem;
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display:inline-block;
+    letter-spacing: .2rem;
+
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    transition: all .2s;
+
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black,.2);
     }
 }
