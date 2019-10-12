@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html { /* root */
+    font-size: 62.5%; /* 62.5% - will be % from default browsers's size which is usually 16px, so now it's 10px*/
+}
+
+body {  /*efficient way to make all child elements inherit a property, fonts should always be in the body*/
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-dark-grey;
+
+    padding: 3rem; /* white line around a web page */
+
+    box-sizing: border-box; /* borders and paddings are no longer added to the total width/height of the element*/
+}
