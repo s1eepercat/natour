@@ -1,7 +1,7 @@
 body {  /*efficient way to make all child elements inherit a property, fonts should always be in the body*/
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    // font-size: 1.6rem;
+    font-size: $default-font-size;
     line-height: 1.7;
     color: $color-dark-grey;
 
@@ -35,10 +35,6 @@ body {  /*efficient way to make all child elements inherit a property, fonts sho
     }
 }
 
-.btn {
-    font-size: 1.6rem;
-}
-
 .heading-secondary {
     font-size: 3.5rem;
     text-transform: uppercase;
@@ -55,5 +51,19 @@ body {  /*efficient way to make all child elements inherit a property, fonts sho
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black,.2);
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem; 
     }
 }
