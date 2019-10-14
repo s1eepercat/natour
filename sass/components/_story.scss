@@ -1,0 +1,25 @@
+.story {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black,.1);
+    background-color: $color_white;
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;
+
+    &__shape {
+        background-color: orangered;
+
+        width: 15rem; //dimensions need to be defined for shape to work
+        height: 15rem;
+        float: left; //also needs to be floated
+        -webkit-shape-outside: circle(50% at 50% 50%); //Makes text next to it shape in a circle
+        shape-outside: circle(50% at 50% 50%); 
+
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+
+        transform: translateX(-3rem);
+    }
+}

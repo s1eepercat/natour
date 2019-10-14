@@ -44,8 +44,8 @@
         }
     }
     
-    /*after pseudo-element for a btn*/
-    &::after { 
+    
+    &::after { /*after pseudo-element for a btn*/
         content: ""; /* < --- need to specify at least something for pseudo-element to appear*/
         display: inline-block;
         height: 100%;
