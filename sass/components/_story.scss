@@ -2,15 +2,15 @@
     width: 75%;
     margin: 0 auto;
     box-shadow: 0 3rem 6rem rgba($color-black,.1);
-    background-color: $color_white;
+    background-color: rgba($color-white,.6);
     border-radius: 3px;
     padding: 6rem;
     padding-left: 9rem;
     font-size: $default-font-size;
+    transform: skewX(-12deg);
+    position: relative;
 
     &__shape {
-        background-color: orangered;
-
         width: 15rem; //dimensions need to be defined for shape to work
         height: 15rem;
         float: left; //also needs to be floated
@@ -20,6 +20,41 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
 
-        transform: translateX(-3rem);
+        transform: translateX(-3rem) skewX(12deg);
+    }
+
+    &__img {
+        height: 100%;
+        transform: translateX(-3.5rem) scale(1.4);
+        backface-visibility: hidden;
+        transition: all .7s;
+    }
+
+    &__text {
+        transform: skewX(12deg)
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,0);
+        color: $color_white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .7s;
+        backface-visibility: hidden; //fixes shake
+    }
+
+    &:hover &__caption {
+        transform: translate(-50%,-50%);
+        opacity: 1;
+    }
+
+    &:hover &__img {
+        transform: translateX(-3.5rem) scale(1);
+        filter: blur(3px) brightness(80%);
     }
 }
