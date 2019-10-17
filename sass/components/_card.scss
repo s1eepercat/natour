@@ -14,7 +14,7 @@
         width: 100%;
         backface-visibility: hidden;
         // overflow: hidden; STOPPED WORKING BECAUSE OF CLIP-PATH, NOW HAVE TO ROUND CORNERS MANUALLY WITH border-top-left/right-radius for front side
-        border-radius: 3px;
+        border-radius: $border-radius;
         box-shadow: 0 1.5rem 4rem rgba($color-black,.15);
 
         &--front {
