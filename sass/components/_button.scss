@@ -1,5 +1,6 @@
 .btn {
-    &:link,
+    &, //adds these styles to a simple <button>
+    &:link, //these styles are applied only if button has a link (anchor tag) or is visited, so these wont work for a <button>, only for <a>
     &:visited {
         font-size: $default-font-size;
         text-transform: uppercase;
@@ -9,6 +10,11 @@
         border-radius: 10rem;
         transition: all .2s;
         position: relative;
+        
+        //Change for a button element
+        border: none;
+        cursor: pointer;
+
     }
     
     &:hover {
@@ -21,7 +27,9 @@
         }
     }
     
-    &:active {
+    &:active,
+    &:focus {
+        outline: none; //for focus of <button>
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black,.2);
     }
