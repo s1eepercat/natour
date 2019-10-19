@@ -57,7 +57,7 @@ body {  /*efficient way to make all child elements inherit a property, fonts sho
 .heading-tertiary {
     font-size: $default-font-size;
     font-weight: 700;
-    transform: uppercase;
+    text-transform: uppercase;
 }
 
 .paragraph {
