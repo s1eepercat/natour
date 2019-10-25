@@ -22,14 +22,16 @@
 [1200 - 1800] our normal styles here
 
 1800px +; big desktop 
-*/
 
-/*
+
 $breakpoint argument choices:
 - phone
 - tab-port
 - tab-land
 - big-desktop
+
+ORDER: Base + typography > general layout > grid > page layout > components
+
 */
 
 // !!! REMS AND EMS IN MEDIA QUERIES ARE NOT AFFECTED BY HTML'S FONT SIZE, BUT BY BROWSERS DEFAULT SETTING, WHICH IS 16px = 1rem/em !!!
