@@ -81,9 +81,26 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/nat-1-large.jpg" alt="photo 1" class="composition__photo composition__photo--p1">
+
+                        <!-- RESOLUTION AND DENSITY SWITCHING-->
+                        <!--if size 900 = make it 20vw, default is 300px. src is a backup for older browsers -->
+                        <!-- 300w is width in pixels of that image, sizes we specify the approximate width in units for given resolution -->
+                        <!-- browsers chooses images itself -->
+                        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                            sizes="(max-width: 900px) 20vw,(max-width: 600px) 30vw,300px" alt="Photo 1"
+                            class="composition__photo composition__photo--p1" src="img/nat-1-large.jpg">
+
+                        <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                            sizes="(max-width: 900px) 20vw,(max-width: 600px) 30vw,300px" alt="Photo 2"
+                            class="composition__photo composition__photo--p2" src="img/nat-2-large.jpg">
+
+                        <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                            sizes="(max-width: 900px) 20vw,(max-width: 600px) 30vw,300px" alt="Photo 3"
+                            class="composition__photo composition__photo--p3" src="img/nat-3-large.jpg">
+
+                        <!-- <img src="img/nat-1-large.jpg" alt="photo 1" class="composition__photo composition__photo--p1">
                         <img src="img/nat-2-large.jpg" alt="photo 2" class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="photo 3" class="composition__photo composition__photo--p3">
+                        <img src="img/nat-3-large.jpg" alt="photo 3" class="composition__photo composition__photo--p3"> -->
                     </div>
                 </div>
             </div>
@@ -364,12 +381,14 @@
 
         <div class="footer__logo-box">
             <picture class="footer__logo">
+                <!-- WE FORCR A BROWSER TO USE THIS -->
                 <!--1x,2x = density desciptors for a srcset for browsers to choose depending on a screen's pixel density-->
                 <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
                     media="(max-width: 37.5rem)">
 
-                <!--fallback if things above dont work. We can add more sources too-->
-                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo">
+                <!--fallback if things above dont work. We can add more sources too. src is for old browsers-->
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo"
+                    src="img/logo-green-2x.png">
             </picture>
         </div>
 
