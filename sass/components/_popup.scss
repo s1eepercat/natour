@@ -10,6 +10,12 @@
     opacity: 0;
     visibility: hidden; //hides content
 
+    @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px); //BLUR
+        backdrop-filter: blur(10px); //BLUR
+        background-color: rgba($color-black,.3);
+    }
+
     &__content {
         @include center-hor-vert;
         box-shadow: 0 2rem 4rem rgba($color-black,.2);
